@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  int questionIndex = 0;
+
   void answerQuestion() {
+    questionIndex++;
     print('Answer chosen!');
   }
 
@@ -20,16 +23,11 @@ class MyApp extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Text(questions.elementAt(0)),
+          Text(questions.elementAt(questionIndex)),
           RaisedButton(child: Text('Answer 1'), onPressed: answerQuestion),
           RaisedButton(
-              child: Text('Answer 2'),
-              onPressed: () => print('Answer 2 is chosen.')),
-          RaisedButton(
-              child: Text('Answer 3 '),
-              onPressed: () {
-                print('Answer 3 is chosen');
-              }),
+              child: Text('Answer 2'), onPressed: () => answerQuestion),
+          RaisedButton(child: Text('Answer 3 '), onPressed: answerQuestion),
         ],
       ),
     ));
