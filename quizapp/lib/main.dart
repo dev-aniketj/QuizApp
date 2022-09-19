@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
 
   void answerQuestion() {
     questionIndex++;
-    print('Answer chosen!');
+    print(questionIndex);
   }
 
   @override
