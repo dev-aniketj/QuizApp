@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
+  }
+
+}
+
+class MyAppState extends State<MyApp> {
   int questionIndex = 0;
 
   void answerQuestion() {
